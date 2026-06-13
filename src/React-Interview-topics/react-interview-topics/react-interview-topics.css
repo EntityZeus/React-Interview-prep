@@ -1,0 +1,12 @@
+.router-link {
+    text-decoration: none;
+    color: black;
+    width: 100%
+}
+
+.router-item {
+    cursor: pointer;
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
