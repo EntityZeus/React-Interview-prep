@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ReactHooksComponent = () => {
+    const navigate = useNavigate();
 
     const [counter, setCounter] = useState(0);
     const [useEffectExampleData, setUseEffectExampleData] = useState(0);
@@ -15,6 +17,10 @@ const ReactHooksComponent = () => {
     useEffect(() => {
         console.log("useEffect hook example with empty dependency array executed");
     }, [])
+
+    const handleUseReducerClick = () => {
+        navigate('/use-reducer');
+    }
     return (
         <div className="container">
             <h3>React Hooks</h3>
@@ -28,7 +34,7 @@ const ReactHooksComponent = () => {
                 <li className='list-group-item'>useState</li>
                 <li className='list-group-item'>useEffect</li>
                 <li className='list-group-item'>useContext</li>
-                <li className='list-group-item'>useReducer</li>
+                <li className='list-group-item' style = {{cursor: "pointer"}} onClick={handleUseReducerClick}>useReducer</li>
                 <li className='list-group-item'>useCallback</li>
                 <li className='list-group-item'>useMemo</li>
             </ul>
