@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const ReactHooksComponent = () => {
@@ -6,6 +6,18 @@ const ReactHooksComponent = () => {
 
     const [counter, setCounter] = useState(0);
     const [useEffectExampleData, setUseEffectExampleData] = useState(0);
+
+    const [redoCounter, setRedoCounter] = useState(false);
+
+    const valueuseMemo = useMemo(() => {
+        if(redoCounter) {
+            let sum = 0;
+            for(let i=0; i<1000000000; i++){
+                sum += i;
+            }
+            return `useMemo hook example, sum of 0 to 1000000000 is ${sum}`;
+        }
+    }, [redoCounter])
 
     // useEffect with dependency array, here it only executes when the value in dependency array changes
     useEffect(() => {
@@ -61,6 +73,17 @@ const ReactHooksComponent = () => {
             <p>Example of useEffect hook</p>
             <p> Number of times useEffect hook executed because of counter changes: {useEffectExampleData}</p>
             <p>In the above example, the useEffect hook will be executed whenever the counter state value changes.</p>
+            
+            <h3>useMemo Hook</h3>
+            <p>
+                useMemo hook is used to memoize expensive calculations in a functional component. It takes a callback function and a dependency array as arguments.
+                The callback function will be executed only when the dependency array values change.
+            </p>
+            <h5>Example of useMemo hook</h5>
+            <div className="useMemo-example">
+                <p>{valueuseMemo}</p> 
+                <button className="btn btn-primary" onClick={()=>{setRedoCounter(true)}}>This Button Triggers useMemo</button>
+            </div>
             
         </div>    
     )

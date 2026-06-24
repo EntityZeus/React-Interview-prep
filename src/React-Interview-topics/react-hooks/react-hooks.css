@@ -4,3 +4,8 @@
     gap: 25px;
     padding: 20px;
 }
+.useMemo-example {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
