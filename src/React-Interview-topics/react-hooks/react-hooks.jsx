@@ -30,8 +30,15 @@ const ReactHooksComponent = () => {
         console.log("useEffect hook example with empty dependency array executed");
     }, [])
 
-    const handleUseReducerClick = () => {
-        navigate('/use-reducer');
+    const handleNavigation = (link) => {
+        switch (link) {
+            case 'context':
+                navigate('/todo-app-context');
+            case 'reducer':
+                navigate('/use-reducer');
+            default:
+                console.log('Not mentioned!!');
+        }
     }
     return (
         <div className="container">
@@ -45,8 +52,10 @@ const ReactHooksComponent = () => {
             <ul className='list-group' style={{ width: '50%' }}>
                 <li className='list-group-item'>useState</li>
                 <li className='list-group-item'>useEffect</li>
-                <li className='list-group-item'>useContext</li>
-                <li className='list-group-item' style = {{cursor: "pointer"}} onClick={handleUseReducerClick}>useReducer</li>
+                <li className='list-group-item' style = {{cursor: "pointer"}} 
+                onClick={() => {handleNavigation('context')}}>useContext</li>
+                <li className='list-group-item' style = {{cursor: "pointer"}} 
+                onClick={() => {handleNavigation('reducer')}}>useReducer</li>
                 <li className='list-group-item'>useCallback</li>
                 <li className='list-group-item'>useMemo</li>
             </ul>
