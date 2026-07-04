@@ -5,19 +5,30 @@ import ReactInterviewTopicComponent from './React-Interview-topics/react-intervi
 import TodoMiniApp from './React-Interview-topics/react-todo-use-reducer/react-useReducer';
 import TodoAppWithContext from './React-Interview-topics/react-context/TodoAppWithContext';
 import {TodoAppContextProvider} from './context/todoContext';
+import ReactMachineTest from './React-Interview-topics/React-machine-test/react-machine-test';
+import LoginForm from './React-Interview-topics/React-machine-test/Login-form/login-form';
+import LoginConfirm from './React-Interview-topics/React-machine-test/Login-form/Login-success';
+import { UserLoginContextProvider } from './context/userLoginContext';
+
 function App() {
 
   return (
     <div className="main-container">
       <TodoAppContextProvider>
+        <UserLoginContextProvider>
         <Router>
           <Routes>
             <Route path="/" element={<ReactInterviewTopicComponent />}></Route>
-            <Route path="/hooks" element={<ReactHooksComponent />}></Route>
-            <Route path="/use-reducer" element={<TodoMiniApp />}></Route>
-            <Route path='/todo-app-context' element={<TodoAppWithContext />}></Route>
+              <Route path="/hooks" element={<ReactHooksComponent />}></Route>
+              <Route path="/use-reducer" element={<TodoMiniApp />}></Route>
+              <Route path='/todo-app-context' element={<TodoAppWithContext />}></Route>
+              <Route path='/react-machine-test' element={<ReactMachineTest />}>
+                <Route path='login-test' element={<LoginForm />}></Route>
+                <Route path='login-success' element={<LoginConfirm />} />
+              </Route>
           </Routes>
         </Router>
+        </UserLoginContextProvider>
       </TodoAppContextProvider>
     </div>
   )

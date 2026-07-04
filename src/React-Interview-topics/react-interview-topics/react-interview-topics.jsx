@@ -22,6 +22,11 @@ const reactInterViewTopics = () =>{
                 <li className="list-group-item">Promises</li>
                 <li className="list-group-item">Performance Improvement</li>
                 <li className="list-group-item">Accessibility</li>
+                <li className="list-group-item">
+                    <Link to="/react-machine-test" className="router-link">
+                        React Machine Tests
+                    </Link>
+                </li>
             </ul>
         </>
     )
