@@ -8,6 +8,7 @@ import {TodoAppContextProvider} from './context/todoContext';
 import ReactMachineTest from './React-Interview-topics/React-machine-test/react-machine-test';
 import LoginForm from './React-Interview-topics/React-machine-test/Login-form/login-form';
 import LoginConfirm from './React-Interview-topics/React-machine-test/Login-form/Login-success';
+import PageNotFound from './React-Interview-topics/Page-not-found/PageNotFound';
 import { UserLoginContextProvider } from './context/userLoginContext';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                 <Route path='login-test' element={<LoginForm />}></Route>
                 <Route path='login-success' element={<LoginConfirm />} />
               </Route>
+              <Route path="*" element={<PageNotFound />}></Route>
           </Routes>
         </Router>
         </UserLoginContextProvider>
