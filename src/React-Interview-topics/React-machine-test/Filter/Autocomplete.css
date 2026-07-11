@@ -1,0 +1,13 @@
+.autocomplete-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 50%;
+}
+
+[popover] {
+  margin: 0;
+  border: 0;
+  height: 300px;
+  overflow: auto;
+}

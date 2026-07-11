@@ -17,6 +17,8 @@ const ReactMachineTest = () => {
             <ul className="list-group" style={{ width: '50%' }}>
                 <li className="list-group-item" style={{ cursor: 'pointer'}} 
                 onClick={() => handleRouteChange(0, './login-test')}>Login Form</li>
+                <li className="list-group-item" style={{ cursor: 'pointer'}} 
+                onClick={() => handleRouteChange(1, './autocomplete')}>Autocomplete</li>
                 <li className="list-group-item" style={{ cursor: 'pointer'}}>Progress bar</li>
                 <li className="list-group-item" style={{ cursor: 'pointer'}}>Accordion</li>
             </ul>
