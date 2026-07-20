@@ -19,6 +19,8 @@ const ReactMachineTest = () => {
                 onClick={() => handleRouteChange(0, './login-test')}>Login Form</li>
                 <li className="list-group-item" style={{ cursor: 'pointer'}} 
                 onClick={() => handleRouteChange(1, './autocomplete')}>Autocomplete</li>
+                <li className="list-group-item" style={{ cursor: 'pointer'}} 
+                onClick={() => handleRouteChange(2, './infinite-scroll')}>Infinite Scroll</li>
                 <li className="list-group-item" style={{ cursor: 'pointer'}}>Progress bar</li>
                 <li className="list-group-item" style={{ cursor: 'pointer'}}>Accordion</li>
             </ul>
