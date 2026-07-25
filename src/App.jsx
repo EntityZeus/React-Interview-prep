@@ -11,6 +11,7 @@ import LoginConfirm from './React-Interview-topics/React-machine-test/Login-form
 import PageNotFound from './React-Interview-topics/Page-not-found/PageNotFound';
 import AutoComplete from './React-Interview-topics/React-machine-test/Filter/Autocomplete';
 import InfiniteScroll from './React-Interview-topics/React-machine-test/Infinite-scroll/InfiniteScroll';
+import ProgressBar from './React-Interview-topics/React-machine-test/Progress-bar/progress-bar';
 import { UserLoginContextProvider } from './context/userLoginContext';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
                 <Route path='login-success' element={<LoginConfirm />} />
                 <Route path='autocomplete' element={<AutoComplete />}></Route>
                 <Route path='infinite-scroll' element={<InfiniteScroll />}></Route>
+                <Route path='progress-bar' element={<ProgressBar />}></Route>
               </Route>
               <Route path="*" element={<PageNotFound />}></Route>
           </Routes>

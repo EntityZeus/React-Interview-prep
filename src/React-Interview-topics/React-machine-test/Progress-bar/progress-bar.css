@@ -1,0 +1,25 @@
+.progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    margin-top: 50px;
+    width: 60%;
+    button {
+        width: 200px;
+    }
+
+    .progress-bar-slider {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2px;
+        height: 10px;
+        background-color: antiquewhite;
+
+        .progress-bar-color-slider {
+            background-color: rgb(201, 131, 38);
+            height: 10px;
+            transition: width 0.5s ease-in-out; 
+        }
+    }
+}
